@@ -6,6 +6,7 @@ import(
 )
 
 func passwordChecker (pw string) bool {
+	// Make it UTF-8 safe
 	pwR := []rune(pw)
 	if len(pwR) < 8 {
 		return false
@@ -37,7 +38,7 @@ func main(){
 		fmt.Println("Password Bad")
 	}
 	if passwordChecker("This!I5A") {
-		fmt.Println("Passeord Good")
+		fmt.Println("Password Good")
 	} else {
 		fmt.Println("Password Bad")
 	}
