@@ -7,11 +7,11 @@ func message() string{
 	// extract the first value
 	m := fmt.Sprintln("First:", s[0], s[0:1], s[:1])
 	// extract the last element
-	fmt.Sprintln("Last :", s[len(s)-1], s[len(s)-1:len(s)], s[len(s)-1:])
+	m += fmt.Sprintln("Last :", s[len(s)-1], s[len(s)-1:len(s)], s[len(s)-1:])
 	// get the first five values and add to the message
 	m += fmt.Sprintln("First 5:", s[:5])
 	// get the last four values
-	m += fmt.Sprintln("Last 4:". s[5:])
+	m += fmt.Sprintln("Last 4:", s[5:])
 	// get 5 values from  the middle
 	m += fmt.Sprintln("Middle 5:", s[2:7])
 	return m
