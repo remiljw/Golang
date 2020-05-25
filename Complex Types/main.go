@@ -17,6 +17,21 @@ func compArrays() (bool, bool, bool){
 
 	return arr1 == arr2, arr1 == arr3, arr1 == arr4
 }
+// Initializing Array using keys
+func compArray() (bool, bool, [10]int){
+	var arr1 [10]int
+	arr2 := [...]int{9: 0}
+	arr3 := [10]int{1,9: 10, 4: 5}
+
+	return arr1 == arr2, arr1 == arr3, arr3
+}
+// Reading a Single Item from an Array
+	func message ()string{
+		arr := [...]string{
+			"ready", "Get", "Go", "to",
+		}
+		return fmt.Sprintln(arr[1], arr[0], arr[3], arr[2])
+	}
 func main() {
 	// Defines Array
 	fmt.Printf("%#v\n", defineArray())
@@ -25,4 +40,11 @@ func main() {
 	fmt.Println("[5]int == [5]int{0}  :", comp1)
 	fmt.Println("[5]int == [...]int{0,0,0,0,0}  :", comp2)
 	fmt.Println("[5]int == [5]int{0,0,0,0,9}  :", comp3)
+	// Initializes Array and Compares
+	res1, res2, arr3 := compArray()
+	fmt.Println("[10]int == [...]int{9: 0}  :", res1)
+	fmt.Println("[10]int == [10]int{1,9: 10, 4: 5}", res2)
+	fmt.Println("arr3        :", arr3)
+	// Reading items drom an array
+	fmt.Print(message())
 }
