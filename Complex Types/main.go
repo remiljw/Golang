@@ -51,6 +51,21 @@ func compArray() (bool, bool, [10]int){
 		}
 		return m
 	}
+	// Modifying contents of an array in a loop
+	// fills an array with numbers from 1 to 10
+	func fillArray(arr [10]int) [10] int {
+		for i := 0; i < len(arr); i++{
+			arr [i] = i + 1
+		}
+		return arr
+	}
+			// multiplies an array bt itself then sets the result back to the array
+	func opArray(arr [10]int) [10]int {
+		for i := 0; i < len(arr); i++{
+			arr[i] = arr[i] * arr[i]
+		}
+		return arr
+	}
 func main() {
 	// Defines Array
 	fmt.Printf("%#v\n", defineArray())
@@ -70,4 +85,9 @@ func main() {
 	fmt.Print(words())
 	//  Looping over an Array
 	fmt.Print(loop())
+	// Modifying Contents of an Array
+	var arr [10]int
+	arr = fillArray(arr)
+	arr = opArray(arr)
+	fmt.Println(arr)
 }
