@@ -40,7 +40,17 @@ func compArray() (bool, bool, [10]int){
 		arr[0] = "time"
 
 		return fmt.Sprintln(arr[1], arr[0], arr[3], arr[2])
- 	}
+	 }
+	//  Looping over an Array
+	func loop() string{
+		m := ""
+		arr := [4]int{1,2,3,4}
+		for i := 0; i < len(arr); i++ {
+			arr[i] = arr[i] * arr[i]
+			m += fmt.Sprintf("%v : %v\n", i, arr[i])
+		}
+		return m
+	}
 func main() {
 	// Defines Array
 	fmt.Printf("%#v\n", defineArray())
@@ -58,4 +68,6 @@ func main() {
 	fmt.Print(message())
 	// Writing to an Array
 	fmt.Print(words())
+	//  Looping over an Array
+	fmt.Print(loop())
 }
