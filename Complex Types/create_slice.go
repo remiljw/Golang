@@ -1,6 +1,12 @@
 package main
 
 import "fmt"
+func genSlices() ([]int, []int, []int){
+	var s1 []int
+	s2 := make([]int, 10)
+	s3 := make([]int, 10, 50)
+	return s1, s2, s3
+}
 // Creating Slices from a Slice
 func message() string{
 	s := []int{1,2,3,4,5,6,7,8,9}
@@ -18,4 +24,9 @@ func message() string{
 }
 func main(){
 	fmt.Print(message())
+
+	s1, s2, s3 := genSlices()
+	fmt.Printf("s1: len = %v cap = %v\n", len(s1), cap(s1)) 
+  	fmt.Printf("s2: len = %v cap = %v\n", len(s2), cap(s2)) 
+  	fmt.Printf("s3: len = %v cap = %v\n", len(s3), cap(s3))
 }
