@@ -31,4 +31,16 @@ func capNoLink() (int, int) {
 	s1[3] = 99
 	return s1[3], s2[3]
 }
-func
+func copyNoLink() (int, int, int) {
+	s1 := []int{1,2,3,4,5}
+	s2 := make([]int, len(s1))
+	copied := copy(s2, s1)
+	s1[3] = 99
+	return s1[3], s2[3], copied
+}
+func appendNoLink() (int, int){
+	s1 := []int{1,2,3,4,5}
+	s2 := append([]int{},s1...)
+	s1[3] = 99
+	return s1[3], s2[3]
+}
