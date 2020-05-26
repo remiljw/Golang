@@ -44,3 +44,18 @@ func appendNoLink() (int, int){
 	s1[3] = 99
 	return s1[3], s2[3]
 }
+func main(){
+	l1, l2, l3 := linked()
+	fmt.Println("Linked :", l1, l2, l3)
+	nl1, nl2 := noLink()
+	fmt.Println("No Link :", nl1, nl2)
+	cl1, cl2 := capLinked()
+	fmt.Println("Cap Link :", cl1, cl2)
+	cnl1, cnl2 := capNoLink()
+	fmt.Println("Cap No Link :", cnl1, cnl2)
+	copy1, copy2, copied := copyNoLink()
+	fmt.Print("Copy No Link: ", copy1, copy2)
+	fmt.Printf("(Number of elements copied %v)\n", copied)
+	a1, a2 := appendNoLink()
+	fmt.Println("Append No Link: ",a1, a2)
+}
