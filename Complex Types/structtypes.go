@@ -39,4 +39,4 @@ func main() {
 	for i := 0; i < len(users); i++ {
 		fmt.Printf("%v : %#v\n", i, users[i])
 	}
-	
+}
